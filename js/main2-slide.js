@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
-	</head>
-	<body>
-		<div id="first-banner-container">
-			<!-- 轮播图中的所有图片 -->
-			<div id="first-banner-wrap" style="left: -520px;">
-				<img src="../img/First_banner_05.jpg" >
-				<img src="../img/First_banner_01.jpg" >
-				<img src="../img/First_banner_02.jpg" >
-				<img src="../img/First_banner_03.jpg" >
-				<img src="../img/First_banner_04.jpg" >
-				<img src="../img/First_banner_05.jpg" >
-				<img src="../img/First_banner_01.jpg" >
-			</div>
-			<!-- 轮播图中的小圆点 -->
-			<div id="first-banner-bots">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<!-- 轮播图中的上/下一张图片
-			<!-- 字符实体：&lt;表示 “<”-->
-			<span class="arrow arrow-left">&lt;</span>
-			<span class="arrow arrow-right">&gt;</span>
-		</div>
-		
-		
-		
-		<script type="text/javascript">
-			let curImg = document.getElementById('first-banner-wrap');
+let curImg = document.getElementById('first-banner-wrap');
 			let next = document.querySelector('.arrow-right');
 			let prev = document.querySelector('.arrow-left');
 			next.onclick = function(){
@@ -100,7 +63,7 @@
 				function autoPlay(){
 				timer =	setInterval(function(){
 						next_pic()
-					},1000)
+					},2000)
 				}
 				autoPlay()
 			
@@ -109,13 +72,13 @@
 				 let container = document.getElementById('first-banner-container');
 				 container.onmouseenter = function(){
 					 clearInterval(timer);
-					 
+					 document.querySelector('.arrow-left').style.display = 'inline';
+					 document.querySelector('.arrow-right').style.display = 'inline';
 					
 				 }
                  container.onmouseleave = function(){
-					 autoPlay()
+					 autoPlay();
+					 document.querySelector('.arrow-left').style.display = 'none';
+					 document.querySelector('.arrow-right').style.display = 'none';
 					 
-				 }			 
-		</script>
-	</body>
-</html>
+				 }		

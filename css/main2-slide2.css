@@ -1,0 +1,54 @@
+ 
+ /* 第二个轮播图 */
+ #second-banner-container {
+	 width: 520px;
+	 height: 201px;
+	 /* border-radius: 20px; */
+	 position: relative;
+	 overflow: hidden;
+	
+ }
+ 
+ #second-banner-wrap {
+	 width: 3640px;
+	 height: 201px; 
+	 position: absolute;
+ }
+ #second-banner-wrap img {
+	 width: 520px;
+	 height: 201px;
+	 float: left;
+ }
+ 
+ 
+#second-banner-container .arrow1{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	z-index: 1000;
+	top: 40%;
+}
+
+#second-banner-container .arrow1{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	z-index: 1000;
+	top: 40%;
+	font-size: 18px;
+	background-color: rgba(100,100,100,.6);
+	border-radius: 40%;	
+	color: whitesmoke;
+	text-align: center;
+}
+
+ #second-banner-container .arrow1-left{
+	 left: -6px;
+	 display:none;
+ }
+ #second-banner-container .arrow1-right {
+ 	 right: -6px;
+	 display: none;
+ }

@@ -1,0 +1,30 @@
+ .main-1 {
+	 width: 1190px;
+	 height: 36px;
+	 margin: 0 auto;
+	 /* background-color: lightgreen; */
+	 background-color: white;
+	 padding-top: 6px;
+	 display: flex;
+	 align-items: center;
+ }
+ 
+ .main-1 h2 {
+	 width: 190px;
+	 height: 36px;
+	 /* background-color: yellow; */
+	 float: left;
+	 text-align: center;
+	 line-height: 36px;
+ }
+ 
+ .main-1 ul li {
+	 float: left;
+	 padding-right: 5px;
+	 padding-left: 5px;
+	 font-size: 14px;
+ }
+ 
+ .main-1 ul.special-ul li {
+	 font-weight: 700;
+ }
