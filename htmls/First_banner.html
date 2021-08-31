@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	</head>
+	<body>
+		<div id="first-banner-container">
+			<!-- 轮播图中的所有图片 -->
+			<div id="first-banner-wrap" style="left: -520px;">
+				<img src="../img/First_banner_05.jpg" >
+				<img src="../img/First_banner_01.jpg" >
+				<img src="../img/First_banner_02.jpg" >
+				<img src="../img/First_banner_03.jpg" >
+				<img src="../img/First_banner_04.jpg" >
+				<img src="../img/First_banner_05.jpg" >
+				<img src="../img/First_banner_01.jpg" >
+			</div>
+			<!-- 轮播图中的小圆点 -->
+			<div id="first-banner-bots">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!-- 轮播图中的上/下一张图片
+			<!-- 字符实体：&lt;表示 “<”-->
+			<span class="arrow arrow-left">&lt;</span>
+			<span class="arrow arrow-right">&gt;</span>
+		</div>
+		
+		
+		
+		<script type="text/javascript">
+			let curImg = document.getElementById('first-banner-wrap');
+			let next = document.querySelector('.arrow-right');
+			let prev = document.querySelector('.arrow-left');
+			next.onclick = function(){
+				next_pic();
+			}
+			prev.onclick = function(){
+				prev_pic();
+			}
+			
+			// 小圆点和轮播图联动
+			let dots = document.querySelectorAll('#first-banner-bots span');
+			for (let i=0;i<dots.length;i++) {
+				dots[i].setAttribute('class','');
+			}
+			let dotIndex = 0;
+			dots[dotIndex].setAttribute('class','on');
+			
+			function next_pic(){
+				let curLoc = parseInt(curImg.style.left);
+				if(curLoc === -3120){
+					curLoc = -1040
+				}else {
+					curLoc -=  520;
+				}	
+				curImg.style.left = curLoc + 'px';
+				
+				// console.log(dotIndex)
+				// 小圆点和轮播图联动
+				if(dotIndex<4){
+					dots[dotIndex].setAttribute('class','');
+					dotIndex++;
+				}else {
+					dots[dotIndex].setAttribute('class','');
+					dotIndex = 0
+				}
+				dots[dotIndex].setAttribute('class','on');
+			}
+			function prev_pic(){
+				let curLoc = parseInt(curImg.style.left);
+					if(curLoc === 0){
+						curLoc = -2080
+					}else {
+						curLoc +=  520;
+					}	
+					curImg.style.left = curLoc + 'px';
+					
+					console.log(dotIndex)
+					// 小圆点和轮播图联动
+					if(dotIndex === 0){
+						dots[dotIndex].setAttribute('class','');
+						dotIndex = 4
+					}else {
+						dots[dotIndex].setAttribute('class','');
+						dotIndex--;
+					}
+					dots[dotIndex].setAttribute('class','on');
+				}
+				
+				
+				// 图片定时轮播 每过1s
+				let timer = null
+				function autoPlay(){
+				timer =	setInterval(function(){
+						next_pic()
+					},1000)
+				}
+				autoPlay()
+			
+			     // 当鼠标移入轮播图区域时，停止轮播；
+				 // 鼠标溢出后，开始自动轮播
+				 let container = document.getElementById('first-banner-container');
+				 container.onmouseenter = function(){
+					 clearInterval(timer);
+					 
+					
+				 }
+                 container.onmouseleave = function(){
+					 autoPlay()
+					 
+				 }			 
+		</script>
+	</body>
+</html>

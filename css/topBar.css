@@ -1,0 +1,320 @@
+ /*   一. topBar */
+ .topBar {
+	 width: 100%;
+	 height: 35px;
+	 background-color: #f5f5f5;
+ }
+ 
+ .topBar-content {
+	 width: 1190px;
+	 height: 35px;
+	 line-height: 35px;
+	 margin: 0 auto;
+	 border: 1px solid red;
+	 /* overflow: hidden; /* 清除浮动 */
+ }
+ 
+ .topBar-content-l {
+	 float: left;
+ }
+ 
+ .topBar-content-r {
+	 float: right;
+ }
+ 
+  .topBar-content>ul>li {
+	  float: left;
+  }
+  
+  .topBar .topBar-content:after {
+	  content: '';
+	  display: table;
+	  clear: both;
+  }
+  
+  /* 1.1 topBar中的区域选择 */
+  .area-dropdown {
+	  position: relative;
+  }
+  
+  .area-dropdown:hover .area-dropdown-content {
+	  display: block;
+  }
+  
+  .area-dropdown-content {
+	  position: absolute;
+	  display: none;
+	  min-width: 270px;
+	  height: 200px;
+	  overflow: auto;
+	  box-shadow:3px 3px 5px rgba(0,0,0,.2);
+	  z-index: 2;
+	  background-color: skyblue; 
+  }
+  
+  .area-dropdown-content li {
+	  height: 29px;
+	  line-height: 29px;
+	  padding-left: 8px;
+	  
+  }
+  
+  .area-dropdown-content li:hover {
+	  background-color: #f4f4f4;
+  }
+  
+.area-dropdown span {
+	/* margin-right: 7px; */
+	margin-left: 5px;
+}
+
+.area-dropdown:hover {
+	background-color: white;
+}
+
+/* 1.2 亲,请登录 + 1.3 免费注册 + 1.4 手机逛淘宝 */
+.loginTip,.freeLogin,.phoneTb {
+	margin-left: 7px;
+}
+.loginTip a{
+	color: #f22e00;
+}
+
+/* 1.5 我的淘宝  同"区域选择"*/
+ .mytb-dropdown {
+ 	  position: relative;
+}
+   
+.mytb-dropdown:hover .mytb-dropdown-content {
+ 	  display: block;
+}
+   
+.mytb-dropdown-content {
+ 	  position: absolute;
+ 	  display: none;
+ 	  min-width: 90px;
+ 	  min-height: 58px;
+ 	  box-shadow:3px 3px 5px rgba(0,0,0,.2);
+ 	  z-index: 2;
+ 	  background-color: skyblue; 
+}
+   
+.mytb-dropdown-content li {
+ 	  height: 29px;
+ 	  line-height: 29px;
+ 	  padding-left: 8px;
+ 	  
+}
+   
+.mytb-dropdown-content li:hover {
+ 	  background-color: #f4f4f4;
+}
+
+ .mytb-dropdown span {
+ 	/* margin-right: 7px; */
+ 	margin-left: 5px;
+ }
+ 
+ .mytb-dropdown:hover {
+ 	background-color: white;
+ }
+ 
+ /*无用代码:仅用于平时测试
+  测试下面的"购物车"区域用margin好,还是padding好 */
+/* .mytb-dropdown {
+	 background-color: yellow;
+ }
+ .shopcart {
+	 background-color: red;
+ }
+ .fav {
+	 background-color: black;
+ } */
+ 
+ /* 1.6 购物车 */
+ .shopcart,.fav {
+	 /* margin-left: 6px;
+	 margin-right: 6px; */
+	 /* margin: 0 6px; */
+	 padding: 0 6px;/*用margin也可,但是视觉效果没有padding好,padding可以实现"该区域悬浮时,块与块之间无缝衔接*/
+ }
+ 
+ /* 1.7 收藏夹 */
+ .fav:hover {
+	 color:#ff4400 ;
+	 /* background-color: yellow; */
+ }
+ 
+ /* 1.8商品分类 + 1.9免费开店 */
+ .goodsSort,.freeStore {
+	  padding: 0 6px;
+ }
+
+/* 1.10竖线分割 */
+.shuXian{
+	padding: 0 5px;
+	color: #dddddd;
+}
+
+ /* 1.11 千牛卖家中心 */
+ .qianNiu {
+	 padding: 0 5px;
+ }
+ 
+ 
+ /* 1.12 联系客服 */
+/* 同"我的淘宝""  同"区域选择"*/
+ .service-dropdown {
+ 	  position: relative;
+}
+   
+.service-dropdown:hover .service-dropdown-content {
+ 	  display: block;
+}
+   
+.service-dropdown-content {
+ 	  position: absolute;
+ 	  display: none;
+ 	  min-width: 90px;
+ 	  min-height: 58px;
+ 	  box-shadow:3px 3px 5px rgba(0,0,0,.2);
+ 	  z-index: 2;
+ 	  background-color: skyblue; 
+}
+   
+.service-dropdown-content li {
+ 	  height: 29px;
+ 	  line-height: 29px;
+ 	  padding-left: 8px;
+ 	  
+}
+   
+.service-dropdown-content li:hover {
+ 	  background-color: #f4f4f4;
+}
+   
+ .service-dropdown span {
+ 	margin-left: 5px;
+ }
+ 
+ .service-dropdown:hover {
+ 	background-color: white;
+ }
+  
+
+ /* 1.13  网站导航*/
+/* 同"练习客服" 同"我的淘宝""  同"区域选择"*/
+ .netNav-dropdown {
+ 	  position: relative;
+	  padding: 0 5px;
+}
+   
+.netNav-dropdown:hover .netNav-dropdown-content {
+ 	  display: block;
+}
+   
+.netNav-dropdown-content {
+ 	  position: absolute;
+ 	  display: none;
+ 	  min-width: 1190px;
+ 	  min-height: 258px;
+ 	  border: 1px solid #eee;
+ 	  z-index: 2;
+ 	  background-color: white; 
+	  right: 0;
+}
+   
+ .netNav-dropdown span {
+ 	margin-left: 5px;
+ }
+ 
+ .netNav-dropdown:hover {
+ 	background-color: white;
+ }
+ 
+ .netNav-dropdown-content>div {
+	 width: 25%;
+	 box-sizing: border-box;
+	 float: left;
+	 padding: 5px;
+ }
+  .netNav-dropdown-content>div:nth-child(-n+3){
+	border-right: 1px solid #eee;
+  }
+ 
+ 
+ .netNav-dropdown-content>div ul {
+	 overflow: hidden;
+ }
+
+.theme-content ul li,
+.specialM-content ul li,
+.aLi-content ul li,
+.rec-content ul li{
+	 float: left;
+	 padding-top: 5px;
+	 height: 25px;
+	 line-height: 25px;
+	 text-align: center;
+	 
+ }
+ 
+ /* 无用代码!!!
+    仅用来测试css选择器？？？     
+*/
+/* .theme-content,.specialM-content ul li {
+ 	 float: left;
+ 	 padding-top: 5px;
+ 	 height: 25px;
+ 	 line-height: 25px;
+ 	 text-align: center;
+ } */
+ /* .theme-content ul li:nth-child(-n+1) {
+	  background-color: pink;
+  } */
+ .netNav-dropdown-content div ul li a {
+	  display: inline-block;
+	  height: 25px;
+/* 	  background-color: yellow; */
+	  padding: 0 8px;
+	  border-radius: 10%;
+  }
+ .theme-content ul li a:hover {
+	 color: white;
+	 background-color:#fc4200;
+ }
+ .specialM-content ul li a:hover {
+	 color: white;
+	 background-color: #9fb838;
+ }
+ .aLi-content ul li a:hover {
+	 color: white;
+	 background-color: #d75696;
+ }
+ .rec-content ul li a:hover {
+	 color: white;
+	 background-color: #2e9fdb;
+ }
+ .netNav-dropdown-content h4 {
+	 font-weight: 600;
+	 font-size: 16px;
+ }
+.area-1 h4 {
+	color: #fc4200;
+}
+
+.area-2 h4 {
+	color: #9fb838;
+}
+
+.area-3 h4 {
+	color: #d75696;
+}
+
+.area-4 h4 {
+	color: #2e9fdb;
+}
+
+
+  
+ 
