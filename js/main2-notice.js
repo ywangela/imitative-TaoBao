@@ -16,7 +16,6 @@
 			notConts[j].style.display = 'none';
 		}
 		notConts[i].style.display = 'block';
-	}
-	
+	}	
 	
  }

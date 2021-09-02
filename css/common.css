@@ -5,6 +5,15 @@
 	padding: 0;
 }
 
+
+/* 业务中相同元素统一 */
+
+/* body背景 */
+body,html{
+	background: 0 36px repeat-y url('https://img.alicdn.com/imgextra/i3/O1CN01PaQurJ1QgnAICTCgg_!!6000000002006-2-tps-1490-2984.png');
+	background-size: cover;
+}
+
 /* 设置全局统一样式 */
  body, button, input, select, textarea {
      font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
@@ -24,3 +33,11 @@
 	 color: #ff4400;
  }
  
+/*topBar中 向下的小三角形  */
+img.triangle-icon{
+	  width: 5px;
+	  height: 5px;
+	  margin-right: 5px;
+	  margin-left: 5px;
+		
+}
