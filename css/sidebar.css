@@ -1,0 +1,62 @@
+ .sidebar {
+	 width: 50px;
+	 /* height: 200px; */
+	 background-color: white;
+	 border: 1px solid #eee;
+	 border-radius: 12px;
+	 
+	 position: absolute;
+	 top: 490px;
+	 right: 50%;	
+	 margin-right: -655px;
+	 z-index: 3;
+
+ }
+ .sidebar-fixed {
+	 position: fixed;
+	 top: 40px;
+ }
+ 
+ .sidebar a {
+	 display: inline-block;
+	 box-sizing: border-box;
+     width: 50px;
+	 height: 50px;
+	 /* line-height: 50px; */
+	 text-align: center;
+	 padding: 3px 2px;
+	 position: relative;
+	 z-index: 4;
+ }
+ 
+ #sidebar-item1{
+	 border-top-right-radius: 12px;
+	 border-top-left-radius: 12px;
+ }
+ 
+ 
+ #sidebar-item5  {
+	 border-bottom-right-radius: 12px;
+	 border-bottom-left-radius: 12px;
+ }
+ 
+ .sidebar a:hover,.sidebar-item1-active,.sidebar-item2-active {
+	 background-image: linear-gradient(135deg,#ff971b,#ff5000);
+	 color: white;
+	 font-weight: 700;
+	
+ }
+ 
+ 
+ 
+ /* 通过这样的方式加下划线,就不会造成鼠标悬浮的时候块与块之间出现的border颜色缝隙(不衔接) */
+.sidebar a:after {
+	 content: '';
+	 border-bottom: 1px solid #eee;
+	 width: 34px;
+	 position: absolute;
+	 left: 8px;
+	 bottom: -1px;
+	 z-index: 1;
+ }
+ 
